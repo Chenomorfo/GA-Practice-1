@@ -12,4 +12,3 @@ jobs:
       run: echo "Hola amigo"
     - name: pull repo
       run: actions/checkout@v2
-    
