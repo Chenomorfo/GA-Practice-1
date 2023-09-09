@@ -1,17 +1,14 @@
-name: Test
-run-name: ${{ github.actor }} is making a Test of autopull
-on: [push]
-  workflow_dispatch:
+name: Test pull
+on: 
+  push:
+    branches:
+    - main
 jobs:
   build:
+    name: Build
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - name: Pull the change from server
-        env:
-          USERNAME: ${{ secrets.USERNAME }}
-          TOKEN: ${{ secrets.TOKEN }}
-        run: | 
-          git pull origin master --rebase
-          echo $USERNAME
-          echo $TOKEN
+    - name: Echo message
+      run: echo "Hola amigo"
+    - name: pull repo
+      run: actions/checkout@v2
