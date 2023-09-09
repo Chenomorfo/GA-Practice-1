@@ -1,0 +1,12 @@
+{
+  "name": "ga-practice-1",
+  "version": "1.0.0",
+  "description": "Hola amigos",
+  "main": "index.js",
+  "scripts": {
+    "hello":"node ./Hello.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

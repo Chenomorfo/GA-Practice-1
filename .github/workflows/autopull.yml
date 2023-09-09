@@ -8,7 +8,9 @@ jobs:
     name: Build
     runs-on: self-hosted
     steps:
-    - name: Echo message
-      run: echo "Hola amigo"
-    - name: pull repo
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm run hello
+          
