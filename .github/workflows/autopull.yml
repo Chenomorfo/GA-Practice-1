@@ -1,0 +1,15 @@
+name: Test pull
+on: 
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+    - name: Echo message
+      run: echo "Hola amigo"
+    - name: pull repo
+      run: actions/checkout@v2
+    
